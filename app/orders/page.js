@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
 import { getOrdersByUser } from "@/lib/orders";
@@ -8,7 +9,16 @@ export const metadata = {
   description: "View your Addis Eats order history and track order status.",
 };
 
-export default async function OrdersPage() {
+function OrdersLoading() {
+  return (
+    <main className="mx-auto max-w-4xl px-5 py-10">
+      <h1 className="text-3xl font-bold">My Orders</h1>
+      <p className="mt-4 text-gray-600">Loading your orders...</p>
+    </main>
+  );
+}
+
+async function OrdersContent() {
   const session = await getSession();
 
   if (!session) {
@@ -23,8 +33,15 @@ export default async function OrdersPage() {
       <p className="mt-2 text-gray-600">
         View your orders and their current status.
       </p>
-
       <OrdersClient initialOrders={orders} />
     </main>
+  );
+}
+
+export default function OrdersPage() {
+  return (
+    <Suspense fallback={<OrdersLoading />}>
+      <OrdersContent />
+    </Suspense>
   );
 }
