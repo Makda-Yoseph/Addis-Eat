@@ -1,0 +1,147 @@
+{
+  "menu": [
+    {
+      "id": 1001,
+      "name": "Shiro",
+      "price": 250,
+      "category": "Fasting",
+      "image": "Shiro.jfif",
+      "description": "A smooth and comforting chickpea stew blended with onions, garlic, and traditional Ethiopian spices.",
+      "inStock": true
+    },
+    {
+      "id": 1002,
+      "name": "Beyaynetu",
+      "price": 340,
+      "category": "Fasting",
+      "image": "Beyaynetu.jfif",
+      "description": "A colorful combination of flavorful Ethiopian dishes served together with injera for a delicious variety of tastes.",
+      "inStock": true
+    },
+    {
+      "id": 1003,
+      "name": "Che chebsa",
+      "price": 300,
+      "category": "Breakfast",
+      "image": "Chechebsa.jfif",
+      "description": "Warm, torn pieces of bread mixed with butter, spices, and coffee-infused flavors, making a comforting Ethiopian treat.",
+      "inStock": true
+    },
+    {
+      "id": 1004,
+      "name": "Firfir",
+      "price": 440,
+      "category": "Breakfast",
+      "image": "Firfir.jfif",
+      "description": "Shredded injera mixed with spicy berbere sauce and seasoned butter, creating a rich and flavorful Ethiopian classic.",
+      "inStock": true
+    },
+    {
+      "id": 1005,
+      "name": "Enkulal Firfir",
+      "price": 250,
+      "category": "Breakfast",
+      "image": "Enkulal.jfif",
+      "description": "Shredded injera tossed with scrambled eggs, spices, and seasoned butter for a hearty and flavorful meal.",
+      "inStock": true
+    },
+    {
+      "id": 1006,
+      "name": "Misir",
+      "price": 440,
+      "category": "Vege",
+      "image": "Misr.jfif",
+      "description": "Tender red lentils cooked with berbere, onions, garlic, and Ethiopian spices for a rich and spicy flavor.",
+      "inStock": true
+    },
+    {
+      "id": 1007,
+      "name": "Special Combo",
+      "price": 740,
+      "category": "Combo",
+      "image": "Specialcombo.jfif",
+      "description": "A delicious selection of Ethiopian favorites served together, offering a little taste of everything.",
+      "inStock": true
+    },
+    {
+      "id": 1008,
+      "name": "combo",
+      "price": 640,
+      "category": "Combo",
+      "image": "specialcombo2.jfif",
+      "description": "A generous combination of flavorful Ethiopian dishes served with injera for a satisfying traditional meal.",
+      "inStock": true
+    },
+    {
+      "id": 1009,
+      "name": "Tibs",
+      "price": 540,
+      "category": "Special",
+      "image": "Tibs.jfif",
+      "description": "Tender pieces of sautéed meat cooked with onions, peppers, rosemary, and flavorful Ethiopian spices.",
+      "inStock": true
+    },
+    {
+      "id": 1010,
+      "name": "Doro Wat",
+      "price": 840,
+      "category": "Special",
+      "image": "Doro.jfif",
+      "description": "Tender chicken simmered in a rich, spicy berbere sauce with onions, butter, and traditional Ethiopian spices.",
+      "inStock": true
+    },
+    {
+      "id": 1011,
+      "name": "Macchiato",
+      "price": 150,
+      "category": "Drinks",
+      "image": "Machiato.jfif",
+      "description": "A smooth and aromatic Ethiopian-style espresso topped with steamed milk, perfect for coffee lovers.",
+      "inStock": true
+    },
+    {
+      "id": 1012,
+      "name": "Buna",
+      "price": 100,
+      "category": "Drinks",
+      "image": "Buna.jfif",
+      "description": "Freshly roasted and traditionally brewed Ethiopian coffee with a rich aroma and bold, smooth flavor.",
+      "inStock": true
+    },
+    {
+      "id": 1013,
+      "name": "Tej",
+      "price": 200,
+      "category": "Drinks",
+      "image": "Tej.jfif",
+      "description": "A traditional Ethiopian honey wine with a naturally sweet taste and distinctive golden color.",
+      "inStock": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Special"
+    },
+    {
+      "id": "2",
+      "name": "Breakfast"
+    },
+    {
+      "id": "3",
+      "name": "Fasting"
+    },
+    {
+      "id": "4",
+      "name": "Vege"
+    },
+    {
+      "id": "5",
+      "name": "Combo"
+    },
+    {
+      "id": "6",
+      "name": "Drinks"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "admin-1",
+      "name": "Addis Eats Admin",
+      "email": "admin@addiseats.com",
+      "passwordHash": "$2b$10$Xr.EBoPvVCLTcv31vTO2Oua9JTDcFd3ytjijOJ5GVDAWcbT2wRTpm",
+      "role": "staff"
+    },
+    {
+      "id": "user-1",
+      "name": "Demo Customer",
+      "email": "customer@addiseats.com",
+      "passwordHash": "$2b$10$2/z/cFfURqPJMsYqvlpAR.Zo0rDF8cQZhKRMr1a1xpO6JNG7vuNSu",
+      "role": "customer"
+    },
+    {
+      "id": "b44156c8-e7b2-41d0-b9a4-268bf072cc33",
+      "name": "maki",
+      "email": "maki@gmail.com",
+      "passwordHash": "$2b$10$Tn.7ZeiiCAuoAaqEs2SltOU1wKh6JMOn27N/J3N/4QR.DMhLj/Y12",
+      "role": "customer"
+    }
+  ]
+}
