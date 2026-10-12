@@ -37,6 +37,7 @@ export default function Home() {
               alt="Traditional Ethiopian Doro Wat"
               width={800}
               height={800}
+              priority
               sizes="(max-width: 768px) 100vw, 50vw"
               className="h-72 w-full object-cover md:h-96"
             />
