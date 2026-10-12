@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
   const description = `${dish.description} Discover ${dish.name} at Addis Eats in Addis Ababa.`;
 
   const url = `https://addis-eat-mu.vercel.app/menu/${id}`;
-  const socialImage = `https://addis-eat-mu.vercel.app/images/menu/${dish.image}`;
+  const socialImage = `https://addis-eat-mu.vercel.app/images/menu/Enkulal-Firfir.jfif`;
 
   return {
     title,
