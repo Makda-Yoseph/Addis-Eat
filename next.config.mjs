@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
+
+  htmlLimitedBots:
+    /TelegramBot|Twitterbot|Slackbot|Bingbot|Googlebot|facebookexternalhit|LinkedInBot|WhatsApp/i,
+
   turbopack: {
     rules: {
       "*.css": {
