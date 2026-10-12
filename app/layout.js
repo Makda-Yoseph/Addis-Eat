@@ -14,11 +14,41 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://addis-eat-mu.vercel.app"),
+
   title: {
-    default: "Addis Eats",
+    default: "Addis Eats | Authentic Ethiopian Food in Addis Ababa",
     template: "%s | Addis Eats",
   },
-  description: "Discover delicious food in Addis Ababa, Ethiopia",
+
+  description:
+    "Order authentic Ethiopian food in Addis Ababa. Discover delicious dishes, traditional flavors, and fresh meals delivered to your door.",
+
+  openGraph: {
+    title: "Addis Eats | Authentic Ethiopian Food in Addis Ababa",
+    description:
+      "Discover delicious Ethiopian dishes and order your favorites with Addis Eats.",
+    url: "/",
+    siteName: "Addis Eats",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/images/addis-eats-social.png",
+        width: 1200,
+        height: 630,
+        alt: "Addis Eats — Authentic Ethiopian Food",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Addis Eats | Authentic Ethiopian Food in Addis Ababa",
+    description:
+      "Discover delicious Ethiopian dishes and order your favorites with Addis Eats.",
+    images: ["/images/addis-eats-social.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
