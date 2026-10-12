@@ -23,11 +23,12 @@ export async function generateMetadata({ params }) {
   const title = `${dish.name} | Authentic Ethiopian Food`;
   const description = `${dish.description} Discover ${dish.name} at Addis Eats in Addis Ababa.`;
 
-  const image = `/images/menu/${dish.image}`;
-  const url = `/menu/${id}`;
+  const url = `https://addis-eat-mu.vercel.app/menu/${id}`;
+  const socialImage =
+    "https://addis-eat-mu.vercel.app/images/addis-eats-social.png";
 
   return {
-    title: dish.name,
+    title,
     description,
 
     alternates: {
@@ -35,17 +36,19 @@ export async function generateMetadata({ params }) {
     },
 
     openGraph: {
-      title: dish.name,
-      description: dish.description,
-      url: `https://addis-eat-mu.vercel.app/menu/${id}`,
+      title,
+      description,
+      url,
+      siteName: "Addis Eats",
       images: [
         {
-          url: "https://addis-eat-mu.vercel.app/images/addis-eats-social.png",
+          url: socialImage,
           width: 1200,
           height: 630,
           alt: `Addis Eats - ${dish.name}`,
         },
       ],
+      locale: "en_US",
       type: "website",
     },
 
@@ -53,7 +56,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title,
       description,
-      images: [image],
+      images: [socialImage],
     },
   };
 }
