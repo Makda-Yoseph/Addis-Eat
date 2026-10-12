@@ -87,9 +87,9 @@ async function DishDetails({ params }) {
         <Image
           src={`/images/menu/${dish.image}`}
           alt={dish.name}
-          width={800}
-          height={800}
-          sizes="(max-width: 768px) 100vw, 33vw"
+          width={600}
+          height={400}
+          unoptimized
           className="h-52 w-full object-cover"
         />
 
