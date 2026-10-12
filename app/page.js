@@ -1,5 +1,6 @@
 import Link from "next/link";
 import menuData from "@/data/menu.json";
+import Image from "next/image";
 
 export default function Home() {
   const categories = menuData.categories;
@@ -31,9 +32,12 @@ export default function Home() {
           </div>
 
           <div className="overflow-hidden rounded-2xl">
-            <img
+            <Image
               src="/images/menu/Doro.jfif"
               alt="Traditional Ethiopian Doro Wat"
+              width={800}
+              height={800}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="h-72 w-full object-cover md:h-96"
             />
           </div>

@@ -5,6 +5,7 @@ import useSWR from "swr";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useCartStore } from "@/lib/cart-store";
+import Image from "next/image";
 
 const fetcher = async (url) => {
   const response = await fetch(url);
@@ -183,10 +184,13 @@ export default function MenuClient({
             className="overflow-hidden rounded-xl border border-stone-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
             <Link href={`/menu/${dish.id}`} className="block">
-              <img
+              <Image
                 src={`/images/menu/${dish.image}`}
                 alt={dish.name}
-                className="h-52 w-full object-cover"
+                width={800}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="h-80 w-full rounded-2xl object-cover"
               />
 
               <div className="p-4">
