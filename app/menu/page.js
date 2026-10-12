@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { getMenu } from "@/lib/menu";
 import MenuClient from "./menu-client";
 
-
 export const metadata = {
   title: "Our Menu",
   description:
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function MenuPage({ searchParams }) {
   return (
-    <Suspense fallback={<main className="p-6">Loading menu...</main>}>
+    <Suspense fallback={<main className="p-6"></main>}>
       <MenuContent searchParams={searchParams} />
     </Suspense>
   );
