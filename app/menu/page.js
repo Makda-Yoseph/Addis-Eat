@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { getMenu } from "@/lib/menu";
 import MenuClient from "./menu-client";
-import Image from "next/image";
+
 
 export const metadata = {
   title: "Our Menu",

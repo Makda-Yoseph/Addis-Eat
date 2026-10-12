@@ -189,8 +189,8 @@ export default function MenuClient({
                 alt={dish.name}
                 width={800}
                 height={800}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="h-80 w-full rounded-2xl object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="h-52 w-full object-cover"
               />
 
               <div className="p-4">

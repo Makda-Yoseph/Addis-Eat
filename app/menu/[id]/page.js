@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import menuData from "@/data/menu.json";
 import AddToCartButton from "@/components/add-to-cart-button";
+import Image from "next/image";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -83,10 +84,13 @@ async function DishDetails({ params }) {
       </a>
 
       <div className="mt-8 grid gap-8 md:grid-cols-2">
-        <img
+        <Image
           src={`/images/menu/${dish.image}`}
           alt={dish.name}
-          className="h-80 w-full rounded-2xl object-cover"
+          width={800}
+          height={800}
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="h-52 w-full object-cover"
         />
 
         <div>
