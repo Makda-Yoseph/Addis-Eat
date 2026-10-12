@@ -12,16 +12,46 @@ export async function generateMetadata({ params }) {
     return {
       title: "Dish Not Found",
       description: "The requested dish could not be found.",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
+  const title = `${dish.name} | Authentic Ethiopian Food`;
+  const description = `${dish.description} Discover ${dish.name} at Addis Eats in Addis Ababa.`;
+
+  const image = `/images/menu/${dish.image}`;
+  const url = `/menu/${id}`;
+
   return {
     title: dish.name,
-    description: dish.description,
+    description,
+
+    alternates: {
+      canonical: url,
+    },
+
     openGraph: {
-      title: dish.name,
-      description: dish.description,
-      images: [`/images/menu/${dish.image}`],
+      type: "website",
+      url,
+      title,
+      description,
+      siteName: "Addis Eats",
+      images: [
+        {
+          url: image,
+          alt: `${dish.name} — Addis Eats`,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
     },
   };
 }
