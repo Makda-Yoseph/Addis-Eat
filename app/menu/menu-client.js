@@ -94,7 +94,7 @@ export default function MenuClient({
   const visibleDishes = menu.slice(startIndex, startIndex + PAGE_SIZE);
 
   if (isLoading && !data) {
-    return <main className="p-6">Loading menu...</main>;
+    return <main className="p-6"></main>;
   }
 
   if (error && !data) {

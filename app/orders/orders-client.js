@@ -33,7 +33,7 @@ export default function OrdersClient({ initialOrders }) {
   }
 
   if (isLoading && !orders) {
-    return <p className="mt-6">Loading your orders...</p>;
+    return <p className="mt-6"></p>;
   }
 
   if (!orders?.length) {
