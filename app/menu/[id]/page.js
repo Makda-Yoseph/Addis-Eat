@@ -42,9 +42,7 @@ export async function generateMetadata({ params }) {
       images: [
         {
           url: `/images/menu/${dish.image}`,
-          width: 1200,
-          height: 630,
-          alt: `${dish.name}`,
+          alt: `${dish.name} - Addis Eats`,
         },
       ],
       locale: "en_US",
@@ -55,7 +53,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title,
       description,
-      images: [socialImage],
+      images: [`/images/menu/${dish.image}`],
     },
   };
 }
