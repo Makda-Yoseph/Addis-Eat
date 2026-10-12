@@ -35,17 +35,18 @@ export async function generateMetadata({ params }) {
     },
 
     openGraph: {
-      type: "website",
-      url,
-      title,
-      description,
-      siteName: "Addis Eats",
+      title: dish.name,
+      description: dish.description,
+      url: `https://addis-eat-mu.vercel.app/menu/${id}`,
       images: [
         {
-          url: image,
-          alt: `${dish.name} — Addis Eats`,
+          url: "https://addis-eat-mu.vercel.app/images/addis-eats-social.png",
+          width: 1200,
+          height: 630,
+          alt: `Addis Eats - ${dish.name}`,
         },
       ],
+      type: "website",
     },
 
     twitter: {
