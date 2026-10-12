@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
   const description = `${dish.description} Discover ${dish.name} at Addis Eats in Addis Ababa.`;
 
   const url = `https://addis-eat-mu.vercel.app/menu/${id}`;
-  const socialImage = `https://addis-eat-mu.vercel.app/images/menu/Enkulal-Firfir.jfif`;
+  const socialImage = `https://addis-eat-mu.vercel.app/images/menu/${dish.image}`;
 
   return {
     title,
@@ -41,10 +41,10 @@ export async function generateMetadata({ params }) {
       siteName: "Addis Eats",
       images: [
         {
-          url: socialImage,
+          url: `/images/menu/${dish.image}`,
           width: 1200,
           height: 630,
-          alt: `Addis Eats - ${dish.name}`,
+          alt: `${dish.name}`,
         },
       ],
       locale: "en_US",
