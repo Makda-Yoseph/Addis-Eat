@@ -28,3 +28,26 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+/* Visible keyboard focus throughout Addis Eats */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid #b91c1c;
+  outline-offset: 3px;
+}
+
+/* Keep focused controls visible against the page background */
+:where(input, select, textarea):focus-visible {
+  border-color: #b91c1c;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -26,7 +26,7 @@ export default function CheckoutClient() {
         </p>
         <Link
           href="/menu"
-          className="mt-6 inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-white"
+          className="mt-6 inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-700"
         >
           Browse Menu
         </Link>
@@ -43,6 +43,8 @@ export default function CheckoutClient() {
 
       <form
         action={formAction}
+        aria-describedby={state?.error ? "checkout-error" : undefined}
+        aria-busy={pending}
         className="mt-8 space-y-6 rounded-xl border border-stone-200 bg-white p-6"
       >
         <input
@@ -56,9 +58,13 @@ export default function CheckoutClient() {
           )}
         />
 
+        <p className="text-sm text-stone-600">
+          Fields marked <span aria-hidden="true">*</span> are required.
+        </p>
+
         <div>
           <label htmlFor="name" className="mb-2 block font-medium">
-            Full name
+            Full name <span aria-hidden="true">*</span>
           </label>
           <input
             id="name"
@@ -66,14 +72,16 @@ export default function CheckoutClient() {
             type="text"
             required
             autoComplete="name"
-            className="w-full rounded-lg border border-stone-300 px-4 py-3"
+            maxLength={100}
+            autoCapitalize="words"
+            className="w-full rounded-lg border border-stone-300 px-4 py-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700"
             placeholder="Enter your full name"
           />
         </div>
 
         <div>
           <label htmlFor="phone" className="mb-2 block font-medium">
-            Phone number
+            Phone number <span aria-hidden="true">*</span>
           </label>
           <input
             id="phone"
@@ -81,55 +89,64 @@ export default function CheckoutClient() {
             type="tel"
             required
             autoComplete="tel"
-            className="w-full rounded-lg border border-stone-300 px-4 py-3"
+            maxLength={30}
+            className="w-full rounded-lg border border-stone-300 px-4 py-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700"
             placeholder="Enter your phone number"
           />
         </div>
 
         <div>
           <label htmlFor="address" className="mb-2 block font-medium">
-            Delivery address
+            Delivery address <span aria-hidden="true">*</span>
           </label>
           <textarea
             id="address"
             name="address"
             required
             autoComplete="street-address"
+            maxLength={500}
             rows={3}
-            className="w-full rounded-lg border border-stone-300 px-4 py-3"
+            className="w-full rounded-lg border border-stone-300 px-4 py-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700"
             placeholder="Enter your delivery address"
           />
         </div>
 
-        <div className="rounded-lg bg-stone-50 p-4">
-          <h2 className="font-bold">Order Summary</h2>
+        <section
+          aria-labelledby="order-summary-heading"
+          className="rounded-lg bg-stone-50 p-4"
+        >
+          <h2 id="order-summary-heading" className="font-bold">
+            Order Summary
+          </h2>
 
-          {items.map((item) => (
-            <div
-              key={item.id}
-              className="mt-3 flex justify-between gap-4 text-sm"
-            >
-              <span>
-                {item.name} × {item.quantity}
-              </span>
-              <span>{(item.price * item.quantity).toLocaleString()} ETB</span>
-            </div>
-          ))}
+          <ul className="mt-3 space-y-3">
+            {items.map((item) => (
+              <li key={item.id} className="flex justify-between gap-4 text-sm">
+                <span>
+                  {item.name} × {item.quantity}
+                </span>
+                <span>{(item.price * item.quantity).toLocaleString()} ETB</span>
+              </li>
+            ))}
+          </ul>
 
-          <div className="mt-4 flex justify-between border-t border-stone-200 pt-4 font-bold">
+          <div className="mt-4 flex justify-between gap-4 border-t border-stone-200 pt-4 font-bold">
             <span>Total</span>
-            <span>{total.toLocaleString()} ETB</span>
+            <span aria-live="polite" aria-atomic="true">
+              {total.toLocaleString()} ETB
+            </span>
           </div>
 
           <p className="mt-3 text-xs text-gray-500">
             Your final total is calculated and verified on the server.
           </p>
-        </div>
+        </section>
 
         {state?.error && (
           <p
+            id="checkout-error"
             role="alert"
-            className="rounded-lg bg-red-50 p-3 text-sm text-red-700"
+            className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800"
           >
             {state.error}
           </p>
@@ -138,14 +155,14 @@ export default function CheckoutClient() {
         <button
           type="submit"
           disabled={pending}
-          className="w-full rounded-lg bg-primary px-5 py-3 font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
+          className="w-full rounded-lg bg-primary px-5 py-3 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {pending ? "Placing your order..." : "Place Order"}
         </button>
 
         <Link
           href="/cart"
-          className="block text-center text-sm text-gray-600 hover:text-primary"
+          className="block rounded text-center text-sm text-gray-600 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-700"
         >
           Return to Cart
         </Link>
