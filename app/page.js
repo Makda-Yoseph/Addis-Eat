@@ -15,7 +15,7 @@ export default function Home() {
             </p>
 
             <h1 className="text-4xl font-bold leading-tight md:text-6xl">
-              Authentic Ethiopian food, made with love.
+              Delectable Habasha food, made with Affection.
             </h1>
 
             <p className="mt-5 max-w-lg text-lg text-white/85">
