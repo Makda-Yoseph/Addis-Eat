@@ -48,6 +48,10 @@ export async function signInAction(prevState, formData) {
 
   await createSession(user);
 
+  if (user.id === "admin-1" && user.role === "staff") {
+    redirect("/admin");
+  }
+
   redirect(next);
 }
 export async function signOutAction() {

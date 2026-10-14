@@ -20,6 +20,13 @@
       "email": "maki@gmail.com",
       "passwordHash": "$2b$10$Tn.7ZeiiCAuoAaqEs2SltOU1wKh6JMOn27N/J3N/4QR.DMhLj/Y12",
       "role": "customer"
+    },
+    {
+      "id": "327fa360-c659-43d6-afd3-92d0e1d130b9",
+      "name": "maki",
+      "email": "makiye@gmail.com",
+      "passwordHash": "$2b$10$XJd94EnC0L08ESM/XrZwxud1JroTOaUrC5J1/flqO5XJ7XFcqm93e",
+      "role": "customer"
     }
   ]
 }
