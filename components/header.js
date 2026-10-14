@@ -29,38 +29,17 @@ export default async function Header() {
           </Link>
           <CartLink />
 
-          {session ? (
-            <>
-              {/* <span>{session.name}</span> */}
-
-              {/* {session.role === "staff" && (
-                <Link href="/kitchen" className="hover:text-primary">
-                  Kitchen
-                </Link>
-              )} */}
-
-              <form action={signOutAction}>
-                <button
-                  type="submit"
-                  className="font-semibold text-primary hover:underline"
-                >
-                  Sign out
-                </button>
-              </form>
-            </>
-          ) : (
-            <>
-              <Link href="/signin" className="hover:text-primary">
-                Sign in
-              </Link>
-              <Link
-                href="/register"
-                className="rounded-lg bg-primary px-4 py-2 text-white hover:opacity-90"
-              >
-                Register
-              </Link>
-            </>
-          )}
+          <>
+            <Link href="/signin" className="hover:text-primary">
+              Sign in
+            </Link>
+            <Link
+              href="/register"
+              className="rounded-lg bg-primary px-4 py-2 text-white hover:opacity-90"
+            >
+              Register
+            </Link>
+          </>
         </div>
       </nav>
     </header>
