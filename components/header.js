@@ -31,13 +31,13 @@ export default async function Header() {
 
           {session ? (
             <>
-              <span>{session.name}</span>
+              {/* <span>{session.name}</span> */}
 
-              {session.role === "staff" && (
+              {/* {session.role === "staff" && (
                 <Link href="/kitchen" className="hover:text-primary">
                   Kitchen
                 </Link>
-              )}
+              )} */}
 
               <form action={signOutAction}>
                 <button
