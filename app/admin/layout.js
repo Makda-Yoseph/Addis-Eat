@@ -39,7 +39,7 @@ export default function AdminLayout({ children }) {
 
         <div className="mt-8 border-t border-stone-800 pt-5">
           <Link href="/" className="text-sm text-stone-400 hover:text-white">
-            ← View customer website
+            {/* ← View customer website */}
           </Link>
         </div>
       </aside>

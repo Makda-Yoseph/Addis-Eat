@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
 import { getOrderById } from "@/lib/orders";
-import ClearCartOnSuccess from "@/app/checkout/clear-cart";
+import ClearCartOnSuccess from "@/app/(shop)/checkout/clear-cart";
 
 export const metadata = {
   title: "Order Confirmation | Addis Eats",

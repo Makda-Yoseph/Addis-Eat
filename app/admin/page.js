@@ -5,9 +5,7 @@ import { getAllOrders } from "@/lib/orders";
 
 export default function AdminPage() {
   return (
-    <Suspense
-      fallback={<p className="p-6 text-stone-500">Loading dashboard...</p>}
-    >
+    <Suspense fallback={<p className="p-6 text-stone-500"></p>}>
       <AdminDashboard />
     </Suspense>
   );

@@ -88,7 +88,7 @@ export default function Footer() {
                 ●
               </span>
               <span>
-                Addis Ababa,
+                Bole Addis Ababa,
                 <br />
                 Ethiopia
               </span>

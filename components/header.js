@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getSession } from "@/lib/session";
-import { signOutAction } from "@/app/signin/actions";
+import { signOutAction } from "@/app/(shop)/signin/actions";
 import CartLink from "@/components/cart-link";
 
 export default async function Header() {
@@ -14,32 +14,40 @@ export default async function Header() {
         </Link>
 
         <div className="flex flex-wrap items-center gap-4 text-sm font-medium">
-          <Link href="/" className="hover:text-primary">
-            Home
-          </Link>
-          <Link href="/menu" className="hover:text-primary">
-            Menu
-          </Link>
-          <Link href="/orders" className="hover:text-primary">
-            Orders
-          </Link>
+          <Link href="/">Home</Link>
+          <Link href="/menu">Menu</Link>
+          <Link href="/orders">Orders</Link>
+          <Link href="/checkout">Checkout</Link>
 
-          <Link href="/checkout" className="hover:text-primary">
-            Checkout
-          </Link>
           <CartLink />
 
-          <>
-            <Link href="/signin" className="hover:text-primary">
-              Sign in
-            </Link>
-            <Link
-              href="/register"
-              className="rounded-lg bg-primary px-4 py-2 text-white hover:opacity-90"
-            >
-              Register
-            </Link>
-          </>
+          {session ? (
+            <>
+              <span className="text-stone-600">
+                Hi, {session.name || "there"}
+              </span>
+
+              <form action={signOutAction}>
+                <button
+                  type="submit"
+                  className="rounded-lg bg-primary px-4 py-2 text-white hover:opacity-90"
+                >
+                  Sign out
+                </button>
+              </form>
+            </>
+          ) : (
+            <>
+              <Link href="/signin">Sign in</Link>
+
+              <Link
+                href="/register"
+                className="rounded-lg bg-primary px-4 py-2 text-white hover:opacity-90"
+              >
+                Register
+              </Link>
+            </>
+          )}
         </div>
       </nav>
     </header>

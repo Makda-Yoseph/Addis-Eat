@@ -27,6 +27,13 @@
       "email": "makiye@gmail.com",
       "passwordHash": "$2b$10$XJd94EnC0L08ESM/XrZwxud1JroTOaUrC5J1/flqO5XJ7XFcqm93e",
       "role": "customer"
+    },
+    {
+      "id": "3c8dc853-9c2c-4d1f-a674-9ca219f9c779",
+      "name": "makiye",
+      "email": "makita@gmail.com",
+      "passwordHash": "$2b$10$2nNtomeF.V.yGfcqYfdtouFDlBqCB7RqHTwfklUejeylQBzAt18Lm",
+      "role": "customer"
     }
   ]
 }
